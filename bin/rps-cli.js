@@ -28,12 +28,12 @@ if (argv.r || argv.rules) {
 			- Rock CRUSHES Scissors');
 	process.exit(0);
 }
-try {
-	const res = rps(argv._[0]);
-	console.log(JSON.stringify(res));
-} catch (error) {
-	if (error instaceof RangeError) {
 
+let shot = args._[0]
+
+try {
+	console.log(JSON.stringify(rps(shot)));
+} catch (e) {
 		console.log(`Usage: node-rps [SHOT]
 				Play Rock Paper Scissors (RPS)
 
@@ -49,9 +49,6 @@ try {
 				- Scissors CUTS Paper
 				- Paper COVERS Rock
 				- Rock CRUSHES Scissors`); 
-		process.exit(1);
 
-
-	}
 }
 
