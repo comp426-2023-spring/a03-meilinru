@@ -35,13 +35,13 @@ if (argv.r || argv.rules) {
 	process.exit(0);
 }
 
-let shot = args._[0]
+let shot = argv._[0]
 
 try {
 	console.log(JSON.stringify(rpsls(shot)));
 } catch (e) {
-		console.log(`Usage: node-rpsls [SHOT]
-				Play the Lizard-Spock Expansion of Rock Paper Scissors (RPSLS)!
+	console.log(`Usage: node-rpsls [SHOT]
+		Play the Lizard-Spock Expansion of Rock Paper Scissors (RPSLS)!
 
 				-h, --help        display this help message and exit
 				-r, --rules       display the rules and exit
