@@ -29,7 +29,8 @@ if (args.r || args.rules) {
 	process.exit(0);
 }
 
-if (rps(argv._[0]) === undefined) {
+const res = rps(argv._[0]);
+if (res === undefined) {
     console.log(`Usage: node-rps [SHOT]
         Play Rock Paper Scissors (RPS)
         
@@ -53,5 +54,7 @@ if (rps(argv._[0]) === undefined) {
           node-rps rock   Return JSON with results for RPS played against a simulated opponent.
                           e.g {"player":"rock","opponent":"scissors","result":"win"}`);
     process.exit(1);
+} else {
+	console.log(JSON.stringify(res));
 }
 
