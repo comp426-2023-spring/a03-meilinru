@@ -35,12 +35,11 @@ if (argv.r || argv.rules) {
 	process.exit(0);
 }
 
+let shot = args._[0]
 
 try {
-	const res = rpsls(argv._[0]);
-	console.log(JSON.stringify(res));
-} catch (error) {
-	if (error instanceof RangeError) {
+	console.log(JSON.stringify(rpsls(shot)));
+} catch (e) {
 		console.log(`Usage: node-rpsls [SHOT]
 				Play the Lizard-Spock Expansion of Rock Paper Scissors (RPSLS)!
 
@@ -64,5 +63,4 @@ try {
 				- Spock VAPORIZES Rock
 				- Rock CRUSHES Scissors`);
 		process.exit(1);
-	}
 }
