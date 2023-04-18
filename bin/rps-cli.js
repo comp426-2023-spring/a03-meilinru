@@ -29,7 +29,7 @@ if (argv.r || argv.rules) {
 	process.exit(0);
 }
 
-let shot = args._[0]
+let shot = argv._[0]
 
 try {
 	console.log(JSON.stringify(rps(shot)));
