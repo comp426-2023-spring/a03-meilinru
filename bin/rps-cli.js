@@ -16,7 +16,7 @@ if (arg.r || arg.rules) {
 }
 
 try {
-	console.log(JSON.stringify(rps(argument._[0])));
+	console.log(JSON.stringify(rps(arg._[0])));
 } catch (error) {
 	if (error instanceof RangeError) {
 		console.log('Input is not in range');
