@@ -43,7 +43,10 @@ let shot = args._[0]
 
 try {
         console.log(JSON.stringify(rpsls(shot)));
-} catch (e) {
-        console.log(rules);
+} catch (error) {
+        if (error instanceof RangeError) {
+        console.log(`Error: ${args._[0]} is not in the acceptable range.`);
+        rules();
+    }
 }
 
