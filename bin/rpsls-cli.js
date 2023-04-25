@@ -29,7 +29,7 @@ const rules = `Rules for the Lizard-Spock Expansion of Rock Paper Scissors:
 - Rock CRUSHES Scissors
 `;
 
-if (args.h || args.rules) {
+if (args.h || args.help) {
         console.log(help_message);
         process.exit(0);
 }
