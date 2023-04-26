@@ -1,9 +1,9 @@
-
+#!/usr/bin/env python
 #!/usr/bin/env node
 import minimist from 'minimist';
 import { rpsls } from "../lib/rpsls.js"
 
-var args = minimist(process.argv.slice(2));
+var args = minimist(process.argv.slice(2))
 
 const help_message = `Usage: node-rpsls [SHOT]
 Play the Lizard-Spock Expansion of Rock Paper Scissors (RPSLS)!
