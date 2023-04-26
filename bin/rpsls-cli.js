@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+
 #!/usr/bin/env node
 import minimist from 'minimist';
 import { rpsls } from "../lib/rpsls.js"
@@ -31,12 +31,12 @@ const rules = `Rules for the Lizard-Spock Expansion of Rock Paper Scissors:
 
 if (args.h || args.help) {
         console.log(help_message);
-        process.exit(0);
+        process.exit();
 }
 
 if (args.r || args.rules) {
         console.log(rules);
-        process.exit(0);
+        process.exit();
 }
 
 let shot = args._[0]
@@ -47,6 +47,7 @@ try {
         if (error instanceof RangeError) {
         console.log(`Error: ${args._[0]} is not in the acceptable range.`);
         console.log(rules);
+        process.exit();
     }
 }
 
