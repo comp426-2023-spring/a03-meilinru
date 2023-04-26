@@ -31,7 +31,7 @@ const rules =
 - Rock CRUSHES Scissors';
 
 if (args.h || args.help) {
-        console.log(help_message);
+        console.log(help);
         process.exit(0);
 }
 
@@ -45,7 +45,5 @@ let shot = args._[0]
 try {
         console.log(JSON.stringify(rpsls(shot)));
 } catch (e) {
-      console.log(help_message);
         console.log(rules);
-        process.exit();
- }
+}
